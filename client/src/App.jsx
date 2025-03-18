@@ -9,6 +9,7 @@ import AccountManagement from './pages/AccountManagement';
 import FamilyOverview from './pages/FamilyOverview';
 import AddFamilyMember from './components/AddFamilyMember';
 import EditFamilyMember from './components/EditFamilyMember';
+import FinancialDashboard from './pages/FinancialDashboard';
 
 const { Header, Content, Footer } = Layout;
 
@@ -62,6 +63,9 @@ function App() {
               <Link to="/family" style={{ color: darkMode ? '#fff' : '#333', marginRight: '15px', display: 'flex', alignItems: 'center' }}>
                 <TeamOutlined style={{ marginRight: '5px' }} /> Gia phả
               </Link>
+              <Link to="/financial" style={{ color: darkMode ? '#fff' : '#333', marginRight: '15px', display: 'flex', alignItems: 'center' }}>
+                <TeamOutlined style={{ marginRight: '5px' }} /> Tài chính
+              </Link>
               {isAdmin && (
                 <Link
                   to="/auth/accounts"
@@ -100,6 +104,7 @@ function App() {
           {isAuthenticated && isAdmin && (
             <Route path="/auth/accounts" element={<AccountManagement />} />
           )}
+          <Route path="/financial" element={isAuthenticated ? <FinancialDashboard /> : <Navigate replace to="/login" />} />
         </Routes>
       </Content>
       <Footer style={{ textAlign: 'center', background: darkMode ? '#222' : '#f0f2f5', padding: '24px', color: darkMode ? '#fff' : '#333' }}>

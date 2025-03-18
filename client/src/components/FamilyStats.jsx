@@ -76,7 +76,7 @@ const FamilyStats = () => {
         </div>
 
         {/* Biểu đồ tròn thống kê */}
-        <div style={{ flex: 1, minWidth: 800, height: 300 }}>
+        <div style={{ flex: 1, minWidth: 700, height: 200 }}>
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie 

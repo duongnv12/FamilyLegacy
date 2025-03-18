@@ -65,7 +65,6 @@ const FamilyTreeDiagram = () => {
         x="30"
         dy="-2"
         fontSize="16"
-        fontFamily="Arial, sans-serif"
       >
         {nodeDatum.name}
       </text>
@@ -75,7 +74,6 @@ const FamilyTreeDiagram = () => {
           x="30"
           dy="18"
           fontSize="14"
-          fontFamily="Arial, sans-serif"
         >
           {nodeDatum.role}
         </text>

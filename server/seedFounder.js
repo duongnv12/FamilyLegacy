@@ -1,4 +1,3 @@
-// server/seedFounder.js
 const mongoose = require('mongoose');
 const FamilyMember = require('./src/models/FamilyMember');
 const { mongoURI } = require('./src/config/config');
@@ -6,16 +5,16 @@ const chalk = require('chalk');
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(async () => {
-    console.log(chalk.green.bold('Connected to MongoDB for seeding Founder...'));
+    console.log(chalk.green.bold('🟢 Connected to MongoDB for seeding Founder...'));
 
     const founderData = {
       name: 'Ông Tổ',
       birthDate: new Date('1920-01-01'),
-      gender: 'Male',  // Thay đổi theo yêu cầu
+      gender: 'Male',
       placeOfBirth: 'Quê hương',
-      status: 'Sống',
+      status: 'Mất', // Founder đã mất
       role: 'Founder',
-      additionalInfo: 'Người sáng lập dòng họ FamilyLegacy',
+      additionalInfo: 'Người sáng lập dòng họ FamilyLegacy, hiện đã mất.',
       parentId: null,
     };
 

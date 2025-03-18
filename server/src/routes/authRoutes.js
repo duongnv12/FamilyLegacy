@@ -1,6 +1,6 @@
 // server/src/routes/authRoutes.js
 const router = require('express').Router();
-const authController = require('../controllers/authController');
+const authController = require('../controllers/AuthController');
 const authMiddleware = require('../middleware/authMiddleware');
 
 // Các endpoint công khai không cần auth:
