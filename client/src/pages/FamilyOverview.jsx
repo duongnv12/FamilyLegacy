@@ -7,7 +7,7 @@ import FamilyStats from '../components/FamilyStats';
 
 const FamilyOverview = () => {
   return (
-    <div style={{ padding: '8px 24px' }}>
+    <div style={{ padding: '24px' }}>
       <h2>Thông tin Gia phả</h2>
       <Button type="primary" style={{ marginBottom: '16px' }}>
         <Link to="/family/add">Thêm thành viên mới</Link>
